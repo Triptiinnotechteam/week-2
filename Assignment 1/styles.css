@@ -1,0 +1,203 @@
+
+:root {
+  --orange-400: #458ff8;
+
+  --grey-050: #f5f7fa;
+  --grey-100: #e4e7eb;
+  --grey-200: #cbd2d9;
+  --grey-300: #9aa5b1;
+  --grey-400: #7b8794;
+  --grey-500: #616e7c;
+  --grey-600: #52606d;
+  --grey-700: #3e4c59;
+  --grey-800: #323f4b;
+  --grey-900: #1f2933;
+}
+
+html {
+  font-size: 150%;
+  font-weight: 300;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.calculator {
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.064);
+  overflow: hidden;
+  border: 1px solid var(--grey-200);
+}
+
+.calculator__display {
+  color: var(--grey-050);
+  width: 19.25rem;
+  padding: 0.75rem 1rem;
+  text-align: right;
+  font-size: calc(1rem * 1.2 * 1.2);
+}
+
+.calculator__keys {
+  display: grid;
+  grid-gap: 20px;
+  padding: 15px;
+  grid-template-columns: repeat(4, auto);
+  grid-template-areas:
+    ". . . ."
+    "seven eight nine equal"
+    "four five six equal"
+    "one two three equal"
+    "zero decimal clear equal";
+}
+
+
+.one {
+  grid-area: one;
+  border: 1px solid #ddd;
+  background-color:var(--grey-050);
+}
+.two {
+  grid-area: two;
+  border: 1px solid #ddd;
+  background-color:var(--grey-050);
+}
+.three {
+  grid-area: three;
+  border: 1px solid #ddd;
+  background-color:var(--grey-050);
+}
+.four {
+  grid-area: four;
+  border: 1px solid #ddd;
+  background-color:var(--grey-050);
+}
+.five {
+  grid-area: five;
+  border: 1px solid #ddd;
+  background-color:var(--grey-050);
+}
+.six {
+  grid-area: six;
+  border: 1px solid #ddd;
+  background-color:var(--grey-050);
+}
+.seven {
+  grid-area: seven;
+  border: 1px solid #ddd;
+  background-color:var(--grey-050);
+}
+.eight {
+  grid-area: eight;
+  border: 1px solid #ddd;
+  background-color:var(--grey-050);
+}
+.nine {
+  grid-area: nine;
+  border: 1px solid #ddd;
+  background-color:var(--grey-050);
+}
+.zero {
+  grid-area: zero;
+  border: 1px solid #ddd;
+  background-color:var(--grey-050);
+}
+.decimal {
+  grid-area: decimal;
+  border: 1px solid #ddd;
+  background-color:var(--grey-050);
+}
+.clear {
+  grid-area: clear;
+  border: 1px solid #ddd;
+  background-color:var(--grey-050);
+}
+.equal {
+  grid-area: equal;
+  background-color: var(--orange-400);
+  border: none;
+  color: var(--grey-050);
+}
+
+.equal:active {
+  opacity: 0.5;
+
+}
+
+.operator {
+  background: var(--grey-100);
+  border: 1px solid var(--grey-200);
+}
+
+/* .number {
+  background: #fff;
+} */
+
+.operator:active,
+.number:active {
+  background: var(--grey-200);
+  
+}
+
+
+
+input,
+textarea,
+select,
+button {
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  color: var(--grey-900);
+}
+
+input,
+textarea,
+button {
+  border: 1px solid var(--grey-200);
+}
+
+button {
+  padding: 0.6em 1em;
+  border-radius: 0;
+  line-height: 1;
+  background-color: transparent;
+}
+
+button * {
+  pointer-events: none;
+}
+
+@media screen and (max-width: 600px){
+  .calculator__display {
+    width: 16.25rem; 
+}
+}
+@media screen and (min-device-width: 321px) and (max-device-width: 400px) {
+  .calculator__display {
+    width: 15rem; 
+}
+}
+@media screen and (min-device-width: 0px) and (max-device-width: 322px) {
+  .calculator__display {
+    width: 14.50rem; 
+}
+.calculator__keys {
+  grid-gap: 10px;
+  padding: 13px
+}
+}
